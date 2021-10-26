@@ -3,11 +3,11 @@
 ### CrowdStrike Falcon Install - Nutanix Terraform Implementation
 
 1. Clone the project
-```
+```bash
 $ git clone https://github.com/crowdstrike/terraform-nutanix-script
 ```
 2. Change directory into the project
-```
+```bash
 $ cd
 ```
 3. Create a file `<filename>.tfvars`
