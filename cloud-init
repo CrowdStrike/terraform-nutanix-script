@@ -1,0 +1,17 @@
+#cloud-config
+ssh_pwauth: True
+
+# set password and ssh key for default user
+password: ${image_pass}
+#ssh_authorized_keys:
+
+chpasswd:
+  expire: False # disable password change (for default and additional users)
+
+runcmd:
+ - [ curl, -LO, "https://raw.githubusercontent.com/crowdstrike/falcon-linux-install-bash/master/falcon-linux-deploy.sh" ]
+ - [ export, FALCON_CID=${cid} ]
+ - [ export, FALCON_CLIENT_ID=${client_id} ]
+ - [ export, FALCON_CLIENT_SECRET=${client_secret} ]
+ - [ export, FALCON_CLOUD=${falcon_cloud} ]
+ - [ /bin/bash, falcon-linux-deploy.sh ]
