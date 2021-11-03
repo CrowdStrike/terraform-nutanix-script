@@ -9,7 +9,7 @@ chpasswd:
   expire: False # disable password change (for default and additional users)
 
 runcmd:
- - [ curl, -LO, "https://raw.githubusercontent.com/crowdstrike/falcon-linux-install-bash/master/falcon-linux-deploy.sh" ]
+ - [ curl, -LO, "https://raw.githubusercontent.com/crowdstrike/falcon-linux-install-bash/main/falcon-linux-deploy.sh" ]
  - [ export, FALCON_CID=${cid} ]
  - [ export, FALCON_CLIENT_ID=${client_id} ]
  - [ export, FALCON_CLIENT_SECRET=${client_secret} ]
